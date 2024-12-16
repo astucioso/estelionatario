@@ -38,12 +38,10 @@ body {
     background-color: #000000;
     color: black;
     transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5); /* Sombra branca */
 }
 
 .reveal-button:active {
     transform: scale(1.05);
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.7); /* Sombra branca */
 }
 
 .reveal-text {
@@ -71,7 +69,6 @@ body {
     height: 400px;
     margin: 0 30px;
     border-radius: 10px; /* Arredondamento dos cantos dos perfis */
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.7); /* Sombra branca ao redor do perfil */
 }
 
 .profile:hover {
@@ -79,15 +76,15 @@ body {
 }
 
 .profile.left {
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.6); /* Sombra mais suave no perfil à esquerda */
+    /* Removido box-shadow */
 }
 
 .profile.right {
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.8); /* Sombra mais forte no perfil à direita */
+    /* Removido box-shadow */
 }
 
 .profile.bottom {
-    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.7); /* Sombra mais suave e grande no perfil inferior */
+    /* Removido box-shadow */
 }
 
 .avatar {
@@ -96,7 +93,6 @@ body {
     margin-bottom: 20px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.7); /* Sombra branca no avatar */
 }
 
 .avatar img {
@@ -116,7 +112,6 @@ body {
     text-decoration: none;
     margin-bottom: 20px;
     transition: color 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5); /* Sombra branca no nome */
 }
 
 .name a:hover {
@@ -126,17 +121,4 @@ body {
 .badges img {
     width: 30px;
     margin: 5px;
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5); /* Sombra branca nas badges */
-}
-
-.left {
-    align-self: center;
-}
-
-.right {
-    align-self: center;
-}
-
-.bottom {
-    align-self: center;
 }
