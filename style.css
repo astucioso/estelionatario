@@ -95,38 +95,28 @@ body {
 }
 
 .name {
-    font-size: 28px;
+    font-size: 24px;
     color: #fff;
-    text-align: center;
     margin-bottom: 10px;
 }
 
-.nickr {
+.name .nickr {
+    text-decoration: none;
+    font-weight: bold;
     font-size: 28px;
     color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 5px; 
     transition: color 0.3s ease;
 }
 
-
-.subnick {
-    font-size: 18px;
-    color: #aaa;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-
-.nickr:hover {
+.name .nickr:hover {
     color: #000000;
 }
 
-
-.subnick:hover {
-    color: #bbb;
+.subnick {
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 5px;
+    display: block;
 }
 
 .badges {
@@ -136,26 +126,40 @@ body {
 }
 
 .badge {
-    width: 24px; 
-    height: 24px; 
+    width: 24px;
+    height: 24px;
     margin: 5px;
-}
-
-.badge img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-.left {
+.badge[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.left, .right, .bottom {
     align-self: center;
 }
 
-.right {
-    align-self: center;
-}
-
-.bottom {
-    align-self: center;
+.badge[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
