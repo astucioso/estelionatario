@@ -94,16 +94,40 @@ body {
     transform: scale(1.1);
 }
 
-.name a {
+.name {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o nickr */
+.nickr {
     font-size: 28px;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 20px;
+    display: block;
+    margin-bottom: 5px; /* Distância entre o nick e o subnick */
     transition: color 0.3s ease;
 }
 
-.name a:hover {
+/* Estilo para o subnick */
+.subnick {
+    font-size: 18px;
+    color: #aaa;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Mudança de cor para o nickr quando passar o mouse */
+.nickr:hover {
     color: #000000;
+}
+
+/* Mudança de cor para o subnick quando passar o mouse */
+.subnick:hover {
+    color: #bbb;
 }
 
 .badges {
