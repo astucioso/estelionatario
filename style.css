@@ -38,12 +38,12 @@ body {
     background-color: #000000;
     color: black;
     transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5); /* Sombra branca */
 }
 
 .reveal-button:active {
     transform: scale(1.05);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.7); /* Sombra branca */
 }
 
 .reveal-text {
@@ -70,10 +70,12 @@ body {
     width: 250px;
     height: 400px;
     margin: 0 30px;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5); /* Sombra branca nos perfis */
 }
 
 .profile:hover {
     transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.7); /* Aumenta a sombra branca no hover */
 }
 
 .avatar {
