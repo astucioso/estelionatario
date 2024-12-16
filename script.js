@@ -26,6 +26,9 @@ function updateProfileImage(userId) {
         badgeElement.dataset.tooltip = badge.description;
         badgesContainer.appendChild(badgeElement);
       }
+
+      const subnickContainer = subnickElement.parentElement;
+      subnickContainer.appendChild(badgesContainer);
     })
     .catch(error => {
       console.error('Error fetching profile data:', error);
