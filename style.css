@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #000000; 
+    background-color: #000000;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -70,12 +70,13 @@ body {
     width: 250px;
     height: 400px;
     margin: 0 30px;
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5); /* Sombra branca nos perfis */
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.6); /* Sombra branca visível nos perfis */
+    border-radius: 10px; /* Arredondamento dos cantos dos perfis */
 }
 
 .profile:hover {
     transform: scale(1.1);
-    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.7); /* Aumenta a sombra branca no hover */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.8); /* Aumenta a sombra branca no hover */
 }
 
 .avatar {
@@ -84,6 +85,7 @@ body {
     margin-bottom: 20px;
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.7); /* Sombra branca no avatar */
 }
 
 .avatar img {
@@ -103,6 +105,7 @@ body {
     text-decoration: none;
     margin-bottom: 20px;
     transition: color 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5); /* Sombra branca no nome */
 }
 
 .name a:hover {
@@ -112,6 +115,7 @@ body {
 .badges img {
     width: 30px;
     margin: 5px;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5); /* Sombra branca nas badges */
 }
 
 .left {
