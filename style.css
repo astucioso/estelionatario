@@ -113,8 +113,8 @@ body {
 }
 
 .badge {
-    width: 24px; /* Ajuste do tamanho das badges */
-    height: 24px; /* Ajuste do tamanho das badges */
+    width: 24px; 
+    height: 24px; 
     margin: 5px;
 }
 
