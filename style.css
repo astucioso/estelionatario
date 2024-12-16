@@ -68,23 +68,11 @@ body {
     width: 250px;
     height: 400px;
     margin: 0 30px;
-    border-radius: 10px; /* Arredondamento dos cantos dos perfis */
+    border-radius: 10px;
 }
 
 .profile:hover {
     transform: scale(1.1);
-}
-
-.profile.left {
-    /* Removido box-shadow */
-}
-
-.profile.right {
-    /* Removido box-shadow */
-}
-
-.profile.bottom {
-    /* Removido box-shadow */
 }
 
 .avatar {
@@ -118,7 +106,34 @@ body {
     color: #000000;
 }
 
-.badges img {
+.badges {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.badge {
     width: 30px;
+    height: 30px;
+    background-size: cover;
     margin: 5px;
+    border-radius: 50%;
+}
+
+.badge img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.left {
+    align-self: center;
+}
+
+.right {
+    align-self: center;
+}
+
+.bottom {
+    align-self: center;
 }
