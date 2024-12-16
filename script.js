@@ -8,18 +8,14 @@ function updateProfileImage(userId) {
       const subnickElement = document.querySelector('.subnick[data-user-id="' + userId + '"]');
       const badgesContainer = document.querySelector('.badges[badges-user-id="' + userId + '"]');
       
-      // Atualizando a imagem do perfil
       profileImage.src = user.avatar
         ? 'https://cdn.discordapp.com/avatars/' + user.id + '/' + user.avatar + '.' + (user.avatar.startsWith('a_') ? 'gif' : 'png') + '?size=512'
         : 'https://cdn.discordapp.com/embed/avatars/1.png';
   
-      // Atualizando o nome de usuário
       usernameElement.textContent = user.display_name ? user.display_name : user.username;
   
-      // Atualizando o subnick
       subnickElement.textContent = user.username;
   
-      // Atualizando os badges
       badgesContainer.innerHTML = '';
       for (let badge of user.public_flags.badges) {
         let badgeElement = document.createElement('div');
@@ -36,7 +32,6 @@ function updateProfileImage(userId) {
     });
 }
 
-// Chamar as funções para atualizar os perfis automaticamente
 updateProfileImage('748940599150772344');  // Kauan
 updateProfileImage('1220521666128646264');  // '53
 updateProfileImage('1171492628831928322');  // Lowest
