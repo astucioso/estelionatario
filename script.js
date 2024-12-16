@@ -6,7 +6,7 @@ function updateProfileImage(userId) {
       const profileImage = document.querySelector('.profile-img[data-user-id="' + userId + '"]');
       const usernameElement = document.querySelector('.nickr[data-user-id="' + userId + '"]');
       const subnickElement = document.querySelector('.subnick[data-user-id="' + userId + '"]');
-      const badgesContainer = document.getElementById('badges-' + userId);  // Alteração aqui: uso de id para badges
+      const badgesContainer = document.getElementById('badges-' + userId); 
       
       profileImage.src = user.avatar
         ? 'https://cdn.discordapp.com/avatars/' + user.id + '/' + user.avatar + '.' + (user.avatar.startsWith('a_') ? 'gif' : 'png') + '?size=512'
@@ -15,7 +15,7 @@ function updateProfileImage(userId) {
       usernameElement.textContent = user.display_name ? user.display_name : user.username;
       subnickElement.textContent = user.username;
   
-      badgesContainer.innerHTML = ''; // Limpar qualquer conteúdo existente
+      badgesContainer.innerHTML = ''; 
       if (user.public_flags && user.public_flags.badges) {
         for (let badge of user.public_flags.badges) {
           let badgeElement = document.createElement('div');
