@@ -9,36 +9,73 @@
   <meta property="og:url" content="https://59d.io">
   <meta property="og:type" content="website">
   <title>7</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+  <!-- Banner que ocupa toda a tela -->
   <div class="banner">
-    <img src="fotodoshomi/banner.png" alt="Banner do site">
+    <img src="fotodoshomi/banner.png" alt="Banner">
   </div>
 
-  <audio id="background-music" src="song/song.mp3" preload="auto" autoplay loop></audio>
-
+  <!-- Tela Inicial -->
   <div class="start-screen">
     <button id="revealButton" class="reveal-button">clique aqui!</button>
   </div>
 
+  <!-- Container de Perfis -->
   <div class="container" id="profiles-container" style="display: none;">
     <div class="profile left">
       <div class="avatar">
         <a href="https://discord.gg/trafico" target="_blank">
-          <img class="profile-img" data-user-id="748940599150772344" src="" alt="Avatar Kauan">
+          <img class="profile-img" data-user-id="748940599150772344" src="https://via.placeholder.com/180" alt="Avatar Kauan">
         </a>
       </div>
       <div class="name">
         <a class="nickr" data-user-id="748940599150772344" href="https://discord.gg/bocadefumo" target="_blank">Kauan</a>
         <a class="subnick" data-user-id="748940599150772344" href="https://discord.gg/bocadefumo" target="_blank">Kauan</a>
       </div>
+      <div class="badges" id="badges-748940599150772344"></div>
+    </div>
+
+    <div class="profile right">
+      <div class="avatar">
+        <a href="https://discord.gg/governo" target="_blank">
+          <img class="profile-img" data-user-id="1220521666128646264" src="https://via.placeholder.com/180" alt="Avatar '53">
+        </a>
+      </div>
+      <div class="name">
+        <a class="nickr" data-user-id="1220521666128646264" href="https://discord.gg/bocadefumo" target="_blank">'53</a>
+        <a class="subnick" data-user-id="1220521666128646264" href="https://discord.gg/bocadefumo" target="_blank">'53</a>
+      </div>
+      <div class="badges" id="badges-1220521666128646264"></div>
+    </div>
+
+    <div class="profile bottom">
+      <div class="avatar">
+        <a href="https://discord.gg/trafico" target="_blank">
+          <img class="profile-img" data-user-id="1171492628831928322" src="https://via.placeholder.com/180" alt="Avatar Lowest">
+        </a>
+      </div>
+      <div class="name">
+        <a class="nickr" data-user-id="1171492628831928322" href="https://discord.gg/bocadefumo" target="_blank">Lowest</a>
+        <a class="subnick" data-user-id="1171492628831928322" href="https://discord.gg/bocadefumo" target="_blank">Lowest</a>
+      </div>
+      <div class="badges" id="badges-1171492628831928322"></div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Áudio de fundo -->
+  <audio id="background-music" src="song/song.mp3" preload="auto" autoplay loop></audio>
+
+  <!-- Script -->
+  <script>
+    document.getElementById('revealButton').addEventListener('click', function() {
+      document.querySelector('.start-screen').style.display = 'none';
+      document.querySelector('.container').style.display = 'flex';
+    });
+  </script>
 </body>
 </html>
