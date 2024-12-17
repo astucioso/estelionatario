@@ -1,20 +1,42 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #000000;
+/* Corpo da página */
+body, html {
+    height: 100%; /* Garante que o corpo e o HTML ocupem 100% da viewport */
+    margin: 0;
+    overflow: hidden; /* Evita barras de rolagem */
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #000;
     color: white;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Banner ocupando toda a tela */
+.banner {
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem cobre todo o espaço sem distorcer */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Tela inicial */
 .start-screen {
     text-align: center;
     position: absolute;
@@ -22,8 +44,8 @@ body {
 }
 
 .reveal-button {
-    background-color: #000000;
-    border: 2px solid #000000;
+    background-color: #000;
+    border: 2px solid #000;
     padding: 20px 40px;
     font-size: 24px;
     color: white;
@@ -35,7 +57,7 @@ body {
 }
 
 .reveal-button:hover {
-    background-color: #000000;
+    background-color: #333;
     color: black;
     transform: scale(1.1);
 }
@@ -44,12 +66,14 @@ body {
     transform: scale(1.05);
 }
 
+/* Texto revelado */
 .reveal-text {
     font-size: 18px;
     color: #ffffff;
     margin-top: 20px;
 }
 
+/* Container principal */
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -75,6 +99,7 @@ body {
     transform: scale(1.1);
 }
 
+/* Avatar */
 .avatar {
     width: 180px;
     height: 180px;
@@ -94,6 +119,7 @@ body {
     transform: scale(1.1);
 }
 
+/* Nome do perfil */
 .name {
     font-size: 24px;
     color: #fff;
@@ -109,7 +135,7 @@ body {
 }
 
 .name .nickr:hover {
-    color: #000000;
+    color: #000;
 }
 
 .subnick {
@@ -119,6 +145,7 @@ body {
     display: block;
 }
 
+/* Badges */
 .badges {
     display: flex;
     justify-content: center;
@@ -146,32 +173,14 @@ body {
     font-size: 12px;
 }
 
-.left, .right, .bottom {
-    align-self: center;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
 
-.badge[data-tooltip]:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    background-color: #333;
-    color: white;
-    font-size: 12px;
-    padding: 5px;
-    border-radius: 5px;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-}
-.banner {
-    width: 100%;
-    height: 300px; /* Ajuste a altura conforme necessário */
-    overflow: hidden;
-    margin-bottom: 20px; /* Espaço abaixo do banner */
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* A imagem se ajusta ao tamanho da div sem distorcer */
+    .profile {
+        margin: 20px 0;
+    }
 }
