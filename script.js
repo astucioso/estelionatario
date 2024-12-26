@@ -44,4 +44,7 @@ document.getElementById('revealButton').addEventListener('click', function() {
     document.querySelector('.start-screen').style.display = 'none';
 
     document.getElementById('profiles-container').style.display = 'flex';
+
+    document.getElementById('banner-text').style.display = 'block';
+
 });
