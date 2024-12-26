@@ -10,8 +10,7 @@
   <meta property="og:type" content="website">
   <title>7</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .banner-text {
@@ -19,8 +18,12 @@
       font-size: 24px;
       color: white;
       margin-bottom: 20px;
-      display: none;
       font-family: 'Merriweather', serif;
+      display: none;
+    }
+    .container {
+      flex-direction: column;
+      display: none;
     }
   </style>
 </head>
@@ -31,60 +34,47 @@
     <button id="revealButton" class="reveal-button">clique aqui!</button>
   </div>
 
-  <div class="container" id="profiles-container" style="display: none;">
+  <div class="container" id="profiles-container">
     <div class="banner-text" id="banner-text">
       O tempo coloca cada rei no seu trono e cada palhaço no seu circo.
     </div>
     <div class="profile left">
       <div class="avatar">
         <a href="https://discord.gg/trafico" target="_blank">
-          <img class="profile-img" data-user-id="748940599150772344" src="" alt="Avatar Kauan">
+          <img class="profile-img" data-user-id="748940599150772344" src="fotodoshomi/avatar1.png" alt="Avatar Kauan">
         </a>
       </div>
       <div class="name">
         <a class="nickr" data-user-id="748940599150772344" href="https://discord.gg/bocadefumo" target="_blank">Kauan</a>
         <a class="subnick" data-user-id="748940599150772344" href="https://discord.gg/bocadefumo" target="_blank">Kauan</a>
       </div>
-      <div class="badges" id="badges-748940599150772344"></div>
     </div>
 
     <div class="profile right">
       <div class="avatar">
         <a href="https://discord.gg/governo" target="_blank">
-          <img class="profile-img" data-user-id="1220521666128646264" src="" alt="Avatar '53">
+          <img class="profile-img" data-user-id="1220521666128646264" src="fotodoshomi/avatar2.png" alt="Avatar '53">
         </a>
       </div>
       <div class="name">
         <a class="nickr" data-user-id="1220521666128646264" href="https://discord.gg/bocadefumo" target="_blank">'53</a>
         <a class="subnick" data-user-id="1220521666128646264" href="https://discord.gg/bocadefumo" target="_blank">'53</a>
       </div>
-      <div class="badges" id="badges-1220521666128646264"></div>
     </div>
 
     <div class="profile bottom">
       <div class="avatar">
         <a href="https://discord.gg/trafico" target="_blank">
-          <img class="profile-img" data-user-id="1171492628831928322" src="" alt="Avatar Lowest">
+          <img class="profile-img" data-user-id="1171492628831928322" src="fotodoshomi/avatar3.png" alt="Avatar Lowest">
         </a>
       </div>
       <div class="name">
         <a class="nickr" data-user-id="1171492628831928322" href="https://discord.gg/bocadefumo" target="_blank">Lowest</a>
         <a class="subnick" data-user-id="1171492628831928322" href="https://discord.gg/bocadefumo" target="_blank">Lowest</a>
       </div>
-      <div class="badges" id="badges-1171492628831928322"></div>
     </div>
   </div>
 
-  <script>
-    const revealButton = document.getElementById('revealButton');
-    const profilesContainer = document.getElementById('profiles-container');
-    const bannerText = document.getElementById('banner-text');
-
-    revealButton.addEventListener('click', () => {
-      profilesContainer.style.display = 'flex';
-      bannerText.style.display = 'block';
-      revealButton.style.display = 'none';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
