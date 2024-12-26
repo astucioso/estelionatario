@@ -9,9 +9,9 @@ body {
     background-size: cover;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Para alinhar o conteúdo no topo */
     height: 100vh;
     color: white;
     overflow: hidden;
@@ -43,13 +43,13 @@ body {
 
 .container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
-    margin-top: 20px;
+    margin-top: 100px; /* Dê espaço para o banner-texto acima dos perfis */
 }
 
 .profile {
@@ -109,4 +109,18 @@ body {
     color: #ccc;
     margin-top: 5px;
     display: block;
+}
+
+/* Estilo do texto do banner */
+.banner-text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    position: absolute; /* Posiciona no topo da tela */
+    top: 10px; /* Distância do topo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 2; /* Garante que o banner fique acima dos perfis */
 }
