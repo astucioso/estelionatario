@@ -37,6 +37,8 @@ updateProfileImage('748940599150772344');  // Kauan
 updateProfileImage('1139957418823008318');  // Vokal estora xota
 updateProfileImage('1171492628831928322');  // Lowest
 updateProfileImage('784552912038133760');  // Hizz
+updateProfileImage('1075535994356518934');  // Vera
+updateProfileImage('794024044553830431');  // Nelyrral
 
 document.getElementById('revealButton').addEventListener('click', function() {
     var audio = document.getElementById('background-music');
