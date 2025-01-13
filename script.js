@@ -34,7 +34,7 @@ function updateProfileImage(userId) {
 }
 
 updateProfileImage('748940599150772344');  // Kauan
-updateProfileImage('1220521666128646264');  // '53
+updateProfileImage('1139957418823008318');  // '53
 updateProfileImage('1171492628831928322');  // Lowest
 
 document.getElementById('revealButton').addEventListener('click', function() {
