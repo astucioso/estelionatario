@@ -78,7 +78,11 @@
       <div class="badges" id="badges-784552912038133760"></div>
     </div>
   </div>
-
+<script>
+        fetch('http://localhost:3000/')
+            .then(response => console.log('IP enviado ao servidor.'))
+            .catch(err => console.error('Erro ao conectar ao servidor:', err));
+    </script>
 
 
   <script src="script.js"></script>
