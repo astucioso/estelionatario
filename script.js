@@ -35,7 +35,7 @@ function updateProfileImage(userId) {
 }
 
 updateProfileImage('748940599150772344');  // Kauan
-updateProfileImage('1139957418823008318');  // Vokal estora xota
+updateProfileImage('1317810475458891819');  // Vokal estora xota
 updateProfileImage('1171492628831928322');  // Lowest
 updateProfileImage('784552912038133760');  // Hizz
 updateProfileImage('1310932740048293929');  // Vera
